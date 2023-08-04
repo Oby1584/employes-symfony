@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Employés n°{{ voir.id }}{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="card border-primary mb-3">
+        <div class="card-header"><img class="img-fluid" src="{{voir.nom }}" alt=""></div>
+        <div class="card-body">
+            <h4 class="card-title text-center">{{ voir.prenom }}</h4>
+            {{ voir.poste|raw }}
+            <p>{{  voir.dateDeNaissance|date('d/m/Y à H:i:s') }}</p>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
